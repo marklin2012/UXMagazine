@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Show View Controller-->
+        <scene sceneID="wcc-D2-fIB">
+            <objects>
+                <viewController storyboardIdentifier="ShowViewController" id="HC7-9s-ffJ" customClass="ShowViewController" customModule="UXMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wCp-oB-NLj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xhh-AH-XCF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TZE-fj-mZ2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="O2LogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="0WA-x0-q87">
+                                <rect key="frame" x="132" y="631" width="112" height="20"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ux_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Khv-5z-uAt">
+                                <rect key="frame" x="149" y="302" width="77" height="63"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXv-nx-ohg">
+                                <rect key="frame" x="600" y="164" width="375" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="dx9-SC-wu7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="HC7-9s-ffJ" id="QLM-UX-1CH"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FAs-dn-sdt">
+                                <rect key="frame" x="168" y="586" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFw-zL-2mt">
+                                <rect key="frame" x="163" y="517" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9Vg-yF-3bQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="KxQ-XI-wSk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="进入">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterAction" destination="HC7-9s-ffJ" eventType="touchUpInside" id="GGM-pV-nqv"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="O2Logo2" translatesAutoresizingMaskIntoConstraints="NO" id="2J1-9r-tzN">
+                                <rect key="frame" x="151" y="630" width="74" height="22"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3921568627" green="0.56078431370000004" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0WA-x0-q87" firstAttribute="top" secondItem="FAs-dn-sdt" secondAttribute="bottom" constant="8" id="3Ff-Sz-AwB"/>
+                            <constraint firstItem="FAs-dn-sdt" firstAttribute="centerX" secondItem="TZE-fj-mZ2" secondAttribute="centerX" id="7bz-tz-Y5g"/>
+                            <constraint firstItem="BXv-nx-ohg" firstAttribute="centerY" secondItem="TZE-fj-mZ2" secondAttribute="centerY" constant="30" id="9XX-Q9-Ih6"/>
+                            <constraint firstItem="Khv-5z-uAt" firstAttribute="centerY" secondItem="TZE-fj-mZ2" secondAttribute="centerY" id="BKk-Gz-dqU"/>
+                            <constraint firstItem="Xhh-AH-XCF" firstAttribute="top" secondItem="yFw-zL-2mt" secondAttribute="bottom" constant="100" id="C8x-ct-ecH"/>
+                            <constraint firstItem="Khv-5z-uAt" firstAttribute="centerX" secondItem="TZE-fj-mZ2" secondAttribute="centerX" id="FZV-RQ-TfY"/>
+                            <constraint firstItem="BXv-nx-ohg" firstAttribute="leading" secondItem="TZE-fj-mZ2" secondAttribute="leading" constant="600" id="IT2-wA-PMT"/>
+                            <constraint firstItem="yFw-zL-2mt" firstAttribute="centerX" secondItem="TZE-fj-mZ2" secondAttribute="centerX" id="KeF-QN-HeK"/>
+                            <constraint firstItem="BXv-nx-ohg" firstAttribute="width" secondItem="TZE-fj-mZ2" secondAttribute="width" id="Mvt-Vz-KV7"/>
+                            <constraint firstItem="0WA-x0-q87" firstAttribute="centerX" secondItem="TZE-fj-mZ2" secondAttribute="centerX" id="cAR-GM-XNa"/>
+                            <constraint firstItem="2J1-9r-tzN" firstAttribute="centerX" secondItem="TZE-fj-mZ2" secondAttribute="centerX" id="kHo-Tu-60c"/>
+                            <constraint firstItem="2J1-9r-tzN" firstAttribute="centerY" secondItem="0WA-x0-q87" secondAttribute="centerY" id="miB-mF-exx"/>
+                            <constraint firstItem="Xhh-AH-XCF" firstAttribute="top" secondItem="0WA-x0-q87" secondAttribute="bottom" constant="16" id="wHM-qx-A88"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="enterBtn" destination="yFw-zL-2mt" id="ODQ-zX-tmq"/>
+                        <outlet property="o2Logo" destination="0WA-x0-q87" id="qpG-Gu-s1j"/>
+                        <outlet property="o2Logo2" destination="2J1-9r-tzN" id="BoJ-lD-gPV"/>
+                        <outlet property="pageControl" destination="FAs-dn-sdt" id="NPf-v5-3pr"/>
+                        <outlet property="scrollView" destination="BXv-nx-ohg" id="S9x-au-Aac"/>
+                        <outlet property="scrollViewLeadingConstraint" destination="IT2-wA-PMT" id="v3l-Lu-PFw"/>
+                        <outlet property="uxlogoCenterConstraint" destination="BKk-Gz-dqU" id="1Bt-bw-Bfy"/>
+                        <outlet property="uxlogoImageView" destination="Khv-5z-uAt" id="EsY-Pg-5pa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omZ-Ob-NGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629.5" y="465.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="O2Logo2" width="74" height="22"/>
+        <image name="O2LogoWhite" width="112" height="20"/>
+        <image name="ux_logo" width="77" height="63"/>
+    </resources>
+</document>

@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B210159D1C74925A00230AE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210159C1C74925A00230AE8 /* AppDelegate.swift */; };
+		B21015A21C74925A00230AE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21015A01C74925A00230AE8 /* Main.storyboard */; };
+		B21015A41C74925A00230AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B21015A31C74925A00230AE8 /* Assets.xcassets */; };
+		B21015A71C74925A00230AE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21015A51C74925A00230AE8 /* LaunchScreen.storyboard */; };
+		B21015B21C74925A00230AE8 /* UXMagazineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015B11C74925A00230AE8 /* UXMagazineTests.swift */; };
+		B21015BD1C74925A00230AE8 /* UXMagazineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015BC1C74925A00230AE8 /* UXMagazineUITests.swift */; };
+		B21015D91C7492D000230AE8 /* O2StrechableTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015CB1C7492D000230AE8 /* O2StrechableTableHeaderView.swift */; };
+		B21015DA1C7492D000230AE8 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015CC1C7492D000230AE8 /* UIViewController+Snapshot.swift */; };
+		B21015DB1C7492D000230AE8 /* CardEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21015CF1C7492D000230AE8 /* CardEdit.storyboard */; };
+		B21015DC1C7492D000230AE8 /* CardEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015D01C7492D000230AE8 /* CardEditViewController.swift */; };
+		B21015DD1C7492D000230AE8 /* FirstGuide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21015D21C7492D000230AE8 /* FirstGuide.storyboard */; };
+		B21015DE1C7492D000230AE8 /* FirstGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015D31C7492D000230AE8 /* FirstGuideViewController.swift */; };
+		B21015DF1C7492D000230AE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015D51C7492D000230AE8 /* ViewController.swift */; };
+		B21015E01C7492D000230AE8 /* Show.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21015D71C7492D000230AE8 /* Show.storyboard */; };
+		B21015E11C7492D000230AE8 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015D81C7492D000230AE8 /* ShowViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B21015AE1C74925A00230AE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B21015911C74925A00230AE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B21015981C74925A00230AE8;
+			remoteInfo = UXMagazine;
+		};
+		B21015B91C74925A00230AE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B21015911C74925A00230AE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B21015981C74925A00230AE8;
+			remoteInfo = UXMagazine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B21015991C74925A00230AE8 /* UXMagazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXMagazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B210159C1C74925A00230AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B21015A11C74925A00230AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B21015A31C74925A00230AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B21015A61C74925A00230AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B21015A81C74925A00230AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B21015AD1C74925A00230AE8 /* UXMagazineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UXMagazineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21015B11C74925A00230AE8 /* UXMagazineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXMagazineTests.swift; sourceTree = "<group>"; };
+		B21015B31C74925A00230AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B21015B81C74925A00230AE8 /* UXMagazineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UXMagazineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21015BC1C74925A00230AE8 /* UXMagazineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXMagazineUITests.swift; sourceTree = "<group>"; };
+		B21015BE1C74925A00230AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B21015CB1C7492D000230AE8 /* O2StrechableTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2StrechableTableHeaderView.swift; sourceTree = "<group>"; };
+		B21015CC1C7492D000230AE8 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
+		B21015CF1C7492D000230AE8 /* CardEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CardEdit.storyboard; sourceTree = "<group>"; };
+		B21015D01C7492D000230AE8 /* CardEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardEditViewController.swift; sourceTree = "<group>"; };
+		B21015D21C7492D000230AE8 /* FirstGuide.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstGuide.storyboard; sourceTree = "<group>"; };
+		B21015D31C7492D000230AE8 /* FirstGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstGuideViewController.swift; sourceTree = "<group>"; };
+		B21015D51C7492D000230AE8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B21015D71C7492D000230AE8 /* Show.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Show.storyboard; sourceTree = "<group>"; };
+		B21015D81C7492D000230AE8 /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B21015961C74925A00230AE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B21015AA1C74925A00230AE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B21015B51C74925A00230AE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B21015901C74925A00230AE8 = {
+			isa = PBXGroup;
+			children = (
+				B210159B1C74925A00230AE8 /* UXMagazine */,
+				B21015B01C74925A00230AE8 /* UXMagazineTests */,
+				B21015BB1C74925A00230AE8 /* UXMagazineUITests */,
+				B210159A1C74925A00230AE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B210159A1C74925A00230AE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B21015991C74925A00230AE8 /* UXMagazine.app */,
+				B21015AD1C74925A00230AE8 /* UXMagazineTests.xctest */,
+				B21015B81C74925A00230AE8 /* UXMagazineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B210159B1C74925A00230AE8 /* UXMagazine */ = {
+			isa = PBXGroup;
+			children = (
+				B210159C1C74925A00230AE8 /* AppDelegate.swift */,
+				B21015CA1C7492D000230AE8 /* Extensions */,
+				B21015CD1C7492D000230AE8 /* ViewControllers */,
+				B21015A01C74925A00230AE8 /* Main.storyboard */,
+				B21015A31C74925A00230AE8 /* Assets.xcassets */,
+				B21015A51C74925A00230AE8 /* LaunchScreen.storyboard */,
+				B21015A81C74925A00230AE8 /* Info.plist */,
+			);
+			path = UXMagazine;
+			sourceTree = "<group>";
+		};
+		B21015B01C74925A00230AE8 /* UXMagazineTests */ = {
+			isa = PBXGroup;
+			children = (
+				B21015B11C74925A00230AE8 /* UXMagazineTests.swift */,
+				B21015B31C74925A00230AE8 /* Info.plist */,
+			);
+			path = UXMagazineTests;
+			sourceTree = "<group>";
+		};
+		B21015BB1C74925A00230AE8 /* UXMagazineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B21015BC1C74925A00230AE8 /* UXMagazineUITests.swift */,
+				B21015BE1C74925A00230AE8 /* Info.plist */,
+			);
+			path = UXMagazineUITests;
+			sourceTree = "<group>";
+		};
+		B21015CA1C7492D000230AE8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B21015CB1C7492D000230AE8 /* O2StrechableTableHeaderView.swift */,
+				B21015CC1C7492D000230AE8 /* UIViewController+Snapshot.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B21015CD1C7492D000230AE8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B21015CE1C7492D000230AE8 /* CardEdit */,
+				B21015D11C7492D000230AE8 /* Guide */,
+				B21015D41C7492D000230AE8 /* Home */,
+				B21015D61C7492D000230AE8 /* Show */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B21015CE1C7492D000230AE8 /* CardEdit */ = {
+			isa = PBXGroup;
+			children = (
+				B21015CF1C7492D000230AE8 /* CardEdit.storyboard */,
+				B21015D01C7492D000230AE8 /* CardEditViewController.swift */,
+			);
+			path = CardEdit;
+			sourceTree = "<group>";
+		};
+		B21015D11C7492D000230AE8 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				B21015D21C7492D000230AE8 /* FirstGuide.storyboard */,
+				B21015D31C7492D000230AE8 /* FirstGuideViewController.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		B21015D41C7492D000230AE8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B21015D51C7492D000230AE8 /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B21015D61C7492D000230AE8 /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				B21015D71C7492D000230AE8 /* Show.storyboard */,
+				B21015D81C7492D000230AE8 /* ShowViewController.swift */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B21015981C74925A00230AE8 /* UXMagazine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B21015C11C74925A00230AE8 /* Build configuration list for PBXNativeTarget "UXMagazine" */;
+			buildPhases = (
+				B21015951C74925A00230AE8 /* Sources */,
+				B21015961C74925A00230AE8 /* Frameworks */,
+				B21015971C74925A00230AE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UXMagazine;
+			productName = UXMagazine;
+			productReference = B21015991C74925A00230AE8 /* UXMagazine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B21015AC1C74925A00230AE8 /* UXMagazineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B21015C41C74925A00230AE8 /* Build configuration list for PBXNativeTarget "UXMagazineTests" */;
+			buildPhases = (
+				B21015A91C74925A00230AE8 /* Sources */,
+				B21015AA1C74925A00230AE8 /* Frameworks */,
+				B21015AB1C74925A00230AE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B21015AF1C74925A00230AE8 /* PBXTargetDependency */,
+			);
+			name = UXMagazineTests;
+			productName = UXMagazineTests;
+			productReference = B21015AD1C74925A00230AE8 /* UXMagazineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B21015B71C74925A00230AE8 /* UXMagazineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B21015C71C74925A00230AE8 /* Build configuration list for PBXNativeTarget "UXMagazineUITests" */;
+			buildPhases = (
+				B21015B41C74925A00230AE8 /* Sources */,
+				B21015B51C74925A00230AE8 /* Frameworks */,
+				B21015B61C74925A00230AE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B21015BA1C74925A00230AE8 /* PBXTargetDependency */,
+			);
+			name = UXMagazineUITests;
+			productName = UXMagazineUITests;
+			productReference = B21015B81C74925A00230AE8 /* UXMagazineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B21015911C74925A00230AE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = jd.com;
+				TargetAttributes = {
+					B21015981C74925A00230AE8 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					B21015AC1C74925A00230AE8 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = B21015981C74925A00230AE8;
+					};
+					B21015B71C74925A00230AE8 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = B21015981C74925A00230AE8;
+					};
+				};
+			};
+			buildConfigurationList = B21015941C74925A00230AE8 /* Build configuration list for PBXProject "UXMagazine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B21015901C74925A00230AE8;
+			productRefGroup = B210159A1C74925A00230AE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B21015981C74925A00230AE8 /* UXMagazine */,
+				B21015AC1C74925A00230AE8 /* UXMagazineTests */,
+				B21015B71C74925A00230AE8 /* UXMagazineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B21015971C74925A00230AE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21015A71C74925A00230AE8 /* LaunchScreen.storyboard in Resources */,
+				B21015E01C7492D000230AE8 /* Show.storyboard in Resources */,
+				B21015A41C74925A00230AE8 /* Assets.xcassets in Resources */,
+				B21015DB1C7492D000230AE8 /* CardEdit.storyboard in Resources */,
+				B21015DD1C7492D000230AE8 /* FirstGuide.storyboard in Resources */,
+				B21015A21C74925A00230AE8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B21015AB1C74925A00230AE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B21015B61C74925A00230AE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B21015951C74925A00230AE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21015DF1C7492D000230AE8 /* ViewController.swift in Sources */,
+				B21015E11C7492D000230AE8 /* ShowViewController.swift in Sources */,
+				B21015D91C7492D000230AE8 /* O2StrechableTableHeaderView.swift in Sources */,
+				B21015DA1C7492D000230AE8 /* UIViewController+Snapshot.swift in Sources */,
+				B21015DC1C7492D000230AE8 /* CardEditViewController.swift in Sources */,
+				B21015DE1C7492D000230AE8 /* FirstGuideViewController.swift in Sources */,
+				B210159D1C74925A00230AE8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B21015A91C74925A00230AE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21015B21C74925A00230AE8 /* UXMagazineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B21015B41C74925A00230AE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21015BD1C74925A00230AE8 /* UXMagazineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B21015AF1C74925A00230AE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B21015981C74925A00230AE8 /* UXMagazine */;
+			targetProxy = B21015AE1C74925A00230AE8 /* PBXContainerItemProxy */;
+		};
+		B21015BA1C74925A00230AE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B21015981C74925A00230AE8 /* UXMagazine */;
+			targetProxy = B21015B91C74925A00230AE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B21015A01C74925A00230AE8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B21015A11C74925A00230AE8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B21015A51C74925A00230AE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B21015A61C74925A00230AE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B21015BF1C74925A00230AE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B21015C01C74925A00230AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B21015C21C74925A00230AE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UXMagazine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JD.UXMagazine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B21015C31C74925A00230AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UXMagazine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JD.UXMagazine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B21015C51C74925A00230AE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UXMagazineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JD.UXMagazineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UXMagazine.app/UXMagazine";
+			};
+			name = Debug;
+		};
+		B21015C61C74925A00230AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UXMagazineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JD.UXMagazineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UXMagazine.app/UXMagazine";
+			};
+			name = Release;
+		};
+		B21015C81C74925A00230AE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UXMagazineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JD.UXMagazineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UXMagazine;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B21015C91C74925A00230AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UXMagazineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JD.UXMagazineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UXMagazine;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B21015941C74925A00230AE8 /* Build configuration list for PBXProject "UXMagazine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21015BF1C74925A00230AE8 /* Debug */,
+				B21015C01C74925A00230AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B21015C11C74925A00230AE8 /* Build configuration list for PBXNativeTarget "UXMagazine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21015C21C74925A00230AE8 /* Debug */,
+				B21015C31C74925A00230AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B21015C41C74925A00230AE8 /* Build configuration list for PBXNativeTarget "UXMagazineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21015C51C74925A00230AE8 /* Debug */,
+				B21015C61C74925A00230AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B21015C71C74925A00230AE8 /* Build configuration list for PBXNativeTarget "UXMagazineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21015C81C74925A00230AE8 /* Debug */,
+				B21015C91C74925A00230AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B21015911C74925A00230AE8 /* Project object */;
+}

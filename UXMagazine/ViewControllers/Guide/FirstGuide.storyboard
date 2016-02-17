@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--First Guide View Controller-->
+        <scene sceneID="52l-BN-w4a">
+            <objects>
+                <viewController storyboardIdentifier="firstGuide" id="bGR-Jv-DGX" customClass="FirstGuideViewController" customModule="UXMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jHI-hK-3OD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uqk-pm-SVK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qDg-aD-yaj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1XO-0K-JjG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kt2-Nz-Bp4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9BZ-R5-eyp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="初次见面，请选择您感兴趣的频道" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFt-Hr-Hhy">
+                                            <rect key="frame" x="75" y="335" width="225" height="18"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拖动卡片即可编辑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvR-RK-4Te">
+                                            <rect key="frame" x="143" y="333" width="88" height="13"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="11"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="vvR-RK-4Te" firstAttribute="top" secondItem="xFt-Hr-Hhy" secondAttribute="bottom" constant="-20" id="Fs2-DS-Ym1"/>
+                                        <constraint firstItem="xFt-Hr-Hhy" firstAttribute="centerY" secondItem="9BZ-R5-eyp" secondAttribute="centerY" constant="20" id="amT-kU-eRW"/>
+                                        <constraint firstItem="vvR-RK-4Te" firstAttribute="centerX" secondItem="9BZ-R5-eyp" secondAttribute="centerX" id="wB6-9D-aBp"/>
+                                        <constraint firstItem="xFt-Hr-Hhy" firstAttribute="centerX" secondItem="9BZ-R5-eyp" secondAttribute="centerX" id="wJJ-eQ-v16"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1XO-0K-JjG" firstAttribute="leading" secondItem="qDg-aD-yaj" secondAttribute="leading" id="9j3-wq-D41"/>
+                            <constraint firstAttribute="trailing" secondItem="kt2-Nz-Bp4" secondAttribute="trailing" id="Ahn-pe-tJY"/>
+                            <constraint firstAttribute="trailing" secondItem="1XO-0K-JjG" secondAttribute="trailing" id="MiA-Hu-sBe"/>
+                            <constraint firstItem="kt2-Nz-Bp4" firstAttribute="leading" secondItem="qDg-aD-yaj" secondAttribute="leading" id="T7d-zQ-8hV"/>
+                            <constraint firstItem="1XO-0K-JjG" firstAttribute="top" secondItem="jHI-hK-3OD" secondAttribute="bottom" id="Ux2-4u-cJr"/>
+                            <constraint firstItem="Uqk-pm-SVK" firstAttribute="top" secondItem="kt2-Nz-Bp4" secondAttribute="bottom" id="VsW-Yt-OmL"/>
+                            <constraint firstItem="Uqk-pm-SVK" firstAttribute="top" secondItem="1XO-0K-JjG" secondAttribute="bottom" id="nJ0-IN-pTS"/>
+                            <constraint firstItem="kt2-Nz-Bp4" firstAttribute="top" secondItem="jHI-hK-3OD" secondAttribute="bottom" id="ya8-0W-lBH"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backImage" destination="1XO-0K-JjG" id="uP8-ew-mdg"/>
+                        <outlet property="blurView" destination="kt2-Nz-Bp4" id="lfT-k4-Gbi"/>
+                        <outlet property="subTitleLabel" destination="vvR-RK-4Te" id="9Im-IZ-vts"/>
+                        <outlet property="titleCenterYConstraint" destination="amT-kU-eRW" id="Bv5-62-WAj"/>
+                        <outlet property="titleLabel" destination="xFt-Hr-Hhy" id="gyS-O3-RIa"/>
+                        <segue destination="x5U-u4-YSR" kind="show" identifier="firstShowCardEdit" id="Lgp-XA-CdG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OB-Q3-C82" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.5" y="23.5"/>
+        </scene>
+        <!--CardEdit-->
+        <scene sceneID="dTf-9A-5LJ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CardEdit" storyboardName="CardEdit" id="x5U-u4-YSR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBG-bU-a5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605.5" y="24"/>
+        </scene>
+    </scenes>
+</document>
