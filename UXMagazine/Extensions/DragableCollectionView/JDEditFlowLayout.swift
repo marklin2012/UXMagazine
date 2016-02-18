@@ -14,8 +14,8 @@ class JDEditFlowLayout: UICollectionViewFlowLayout {
         
     }
     
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        <#code#>
-    }
+//    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+//        <#code#>
+//    }
 
 }
