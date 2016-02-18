@@ -22,6 +22,13 @@
 		B21015DF1C7492D000230AE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015D51C7492D000230AE8 /* ViewController.swift */; };
 		B21015E01C7492D000230AE8 /* Show.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21015D71C7492D000230AE8 /* Show.storyboard */; };
 		B21015E11C7492D000230AE8 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015D81C7492D000230AE8 /* ShowViewController.swift */; };
+		B21015EE1C75AF3B00230AE8 /* CardChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015EC1C75AF3B00230AE8 /* CardChannelCell.swift */; };
+		B21015EF1C75AF3B00230AE8 /* CardChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21015ED1C75AF3B00230AE8 /* CardChannelCell.xib */; };
+		B21015F21C75B5B800230AE8 /* CardSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015F01C75B5B800230AE8 /* CardSelectedCell.swift */; };
+		B21015F31C75B5B800230AE8 /* CardSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21015F11C75B5B800230AE8 /* CardSelectedCell.xib */; };
+		B21015F81C75BB8D00230AE8 /* JDDragAndDropCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015F51C75BB8D00230AE8 /* JDDragAndDropCollectionView.swift */; };
+		B21015F91C75BB8D00230AE8 /* JDDragAndDropManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015F61C75BB8D00230AE8 /* JDDragAndDropManager.swift */; };
+		B21015FA1C75BB8D00230AE8 /* JDEditFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015F71C75BB8D00230AE8 /* JDEditFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +70,13 @@
 		B21015D51C7492D000230AE8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B21015D71C7492D000230AE8 /* Show.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Show.storyboard; sourceTree = "<group>"; };
 		B21015D81C7492D000230AE8 /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
+		B21015EC1C75AF3B00230AE8 /* CardChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardChannelCell.swift; sourceTree = "<group>"; };
+		B21015ED1C75AF3B00230AE8 /* CardChannelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardChannelCell.xib; sourceTree = "<group>"; };
+		B21015F01C75B5B800230AE8 /* CardSelectedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSelectedCell.swift; sourceTree = "<group>"; };
+		B21015F11C75B5B800230AE8 /* CardSelectedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardSelectedCell.xib; sourceTree = "<group>"; };
+		B21015F51C75BB8D00230AE8 /* JDDragAndDropCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDDragAndDropCollectionView.swift; sourceTree = "<group>"; };
+		B21015F61C75BB8D00230AE8 /* JDDragAndDropManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDDragAndDropManager.swift; sourceTree = "<group>"; };
+		B21015F71C75BB8D00230AE8 /* JDEditFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDEditFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +129,7 @@
 			children = (
 				B210159C1C74925A00230AE8 /* AppDelegate.swift */,
 				B21015CA1C7492D000230AE8 /* Extensions */,
+				B21015E91C75AF3B00230AE8 /* Views */,
 				B21015CD1C7492D000230AE8 /* ViewControllers */,
 				B21015A01C74925A00230AE8 /* Main.storyboard */,
 				B21015A31C74925A00230AE8 /* Assets.xcassets */,
@@ -145,6 +160,7 @@
 		B21015CA1C7492D000230AE8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B21015F41C75BB8D00230AE8 /* DragableCollectionView */,
 				B21015CB1C7492D000230AE8 /* O2StrechableTableHeaderView.swift */,
 				B21015CC1C7492D000230AE8 /* UIViewController+Snapshot.swift */,
 			);
@@ -195,6 +211,43 @@
 				B21015D81C7492D000230AE8 /* ShowViewController.swift */,
 			);
 			path = Show;
+			sourceTree = "<group>";
+		};
+		B21015E91C75AF3B00230AE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B21015EA1C75AF3B00230AE8 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B21015EA1C75AF3B00230AE8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B21015EB1C75AF3B00230AE8 /* CardEdit */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B21015EB1C75AF3B00230AE8 /* CardEdit */ = {
+			isa = PBXGroup;
+			children = (
+				B21015EC1C75AF3B00230AE8 /* CardChannelCell.swift */,
+				B21015ED1C75AF3B00230AE8 /* CardChannelCell.xib */,
+				B21015F01C75B5B800230AE8 /* CardSelectedCell.swift */,
+				B21015F11C75B5B800230AE8 /* CardSelectedCell.xib */,
+			);
+			path = CardEdit;
+			sourceTree = "<group>";
+		};
+		B21015F41C75BB8D00230AE8 /* DragableCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B21015F51C75BB8D00230AE8 /* JDDragAndDropCollectionView.swift */,
+				B21015F61C75BB8D00230AE8 /* JDDragAndDropManager.swift */,
+				B21015F71C75BB8D00230AE8 /* JDEditFlowLayout.swift */,
+			);
+			path = DragableCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,12 +354,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21015F31C75B5B800230AE8 /* CardSelectedCell.xib in Resources */,
 				B21015A71C74925A00230AE8 /* LaunchScreen.storyboard in Resources */,
 				B21015E01C7492D000230AE8 /* Show.storyboard in Resources */,
 				B21015A41C74925A00230AE8 /* Assets.xcassets in Resources */,
 				B21015DB1C7492D000230AE8 /* CardEdit.storyboard in Resources */,
 				B21015DD1C7492D000230AE8 /* FirstGuide.storyboard in Resources */,
 				B21015A21C74925A00230AE8 /* Main.storyboard in Resources */,
+				B21015EF1C75AF3B00230AE8 /* CardChannelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,12 +387,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B21015DF1C7492D000230AE8 /* ViewController.swift in Sources */,
+				B21015F21C75B5B800230AE8 /* CardSelectedCell.swift in Sources */,
 				B21015E11C7492D000230AE8 /* ShowViewController.swift in Sources */,
+				B21015F81C75BB8D00230AE8 /* JDDragAndDropCollectionView.swift in Sources */,
 				B21015D91C7492D000230AE8 /* O2StrechableTableHeaderView.swift in Sources */,
+				B21015EE1C75AF3B00230AE8 /* CardChannelCell.swift in Sources */,
 				B21015DA1C7492D000230AE8 /* UIViewController+Snapshot.swift in Sources */,
+				B21015F91C75BB8D00230AE8 /* JDDragAndDropManager.swift in Sources */,
 				B21015DC1C7492D000230AE8 /* CardEditViewController.swift in Sources */,
 				B21015DE1C7492D000230AE8 /* FirstGuideViewController.swift in Sources */,
 				B210159D1C74925A00230AE8 /* AppDelegate.swift in Sources */,
+				B21015FA1C75BB8D00230AE8 /* JDEditFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,10 +24,15 @@
                                 <rect key="frame" x="149" y="302" width="77" height="63"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXv-nx-ohg">
-                                <rect key="frame" x="600" y="164" width="375" height="400"/>
+                                <rect key="frame" x="600" y="30" width="375" height="667"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="dx9-SC-wu7"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dx9-SC-wu7"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="HC7-9s-ffJ" id="QLM-UX-1CH"/>
                                 </connections>
@@ -67,6 +72,7 @@
                             <constraint firstItem="yFw-zL-2mt" firstAttribute="centerX" secondItem="TZE-fj-mZ2" secondAttribute="centerX" id="KeF-QN-HeK"/>
                             <constraint firstItem="BXv-nx-ohg" firstAttribute="width" secondItem="TZE-fj-mZ2" secondAttribute="width" id="Mvt-Vz-KV7"/>
                             <constraint firstItem="0WA-x0-q87" firstAttribute="centerX" secondItem="TZE-fj-mZ2" secondAttribute="centerX" id="cAR-GM-XNa"/>
+                            <constraint firstItem="BXv-nx-ohg" firstAttribute="height" secondItem="TZE-fj-mZ2" secondAttribute="height" id="fWT-fS-GXS"/>
                             <constraint firstItem="2J1-9r-tzN" firstAttribute="centerX" secondItem="TZE-fj-mZ2" secondAttribute="centerX" id="kHo-Tu-60c"/>
                             <constraint firstItem="2J1-9r-tzN" firstAttribute="centerY" secondItem="0WA-x0-q87" secondAttribute="centerY" id="miB-mF-exx"/>
                             <constraint firstItem="Xhh-AH-XCF" firstAttribute="top" secondItem="0WA-x0-q87" secondAttribute="bottom" constant="16" id="wHM-qx-A88"/>

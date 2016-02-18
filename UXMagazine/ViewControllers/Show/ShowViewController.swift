@@ -227,7 +227,7 @@ class ShowViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK: - Custom inner view
     private func contentA() -> UIView {
-        let content = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: ScrollHeight))
+        let content = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: UIScreen.mainScreen().bounds.size.height))
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: content.frame.size.width, height: labelHeight))
         label.text = "一款可以让您浏览到业界最新资讯额应用"
         label.textColor = UIColor.whiteColor()
@@ -239,7 +239,7 @@ class ShowViewController: UIViewController, UIScrollViewDelegate {
     }
     
     private func contentB() -> UIView {
-        let content = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: ScrollHeight))
+        let content = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: UIScreen.mainScreen().bounds.size.height))
         let labelA = UILabel(frame: CGRect(x: 0, y: 0, width: content.frame.size.width, height: labelHeight))
         labelA.text = "编辑搜罗您最爱的内容"
         labelA.textColor = UIColor.whiteColor()
@@ -261,7 +261,7 @@ class ShowViewController: UIViewController, UIScrollViewDelegate {
     }
     
     private func contentC() -> UIView {
-        let content = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: ScrollHeight))
+        let content = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: UIScreen.mainScreen().bounds.size.height))
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: content.frame.size.width, height: labelHeight))
         label.text = "内容每周更新与世界同步"
         label.textColor = UIColor.whiteColor()

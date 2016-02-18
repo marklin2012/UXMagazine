@@ -30,6 +30,12 @@ class FirstGuideViewController: UIViewController {
         
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        performSegueWithIdentifier("firstShowCardEdit", sender: nil)
+    }
+    
+    
+    // MARK: - Animations
     private func makeBlurAnimation() {
         backImage.image = backgroundImage
         UIView.animateWithDuration(2, animations: { [weak self] () -> Void in
