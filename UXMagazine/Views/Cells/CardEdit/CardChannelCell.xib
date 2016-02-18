@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CardChannelCell" customModule="UXMagazine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="126" height="172"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="126" height="172"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0co-ho-94F">
+                        <rect key="frame" x="0.0" y="0.0" width="126" height="172"/>
+                    </imageView>
+                    <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgJ-3E-vqs">
+                        <rect key="frame" x="0.0" y="135" width="126" height="37"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgy-Wj-GzK">
+                                <rect key="frame" x="47" y="12" width="33" height="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zgy-Wj-GzK" firstAttribute="centerX" secondItem="vgJ-3E-vqs" secondAttribute="centerX" id="1A9-3s-uGK"/>
+                            <constraint firstItem="Zgy-Wj-GzK" firstAttribute="centerY" secondItem="vgJ-3E-vqs" secondAttribute="centerY" id="MNh-CX-Pbm"/>
+                            <constraint firstAttribute="height" constant="37" id="VYw-bf-i7b"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0co-ho-94F" secondAttribute="trailing" id="1hG-ZU-Z3k"/>
+                <constraint firstItem="vgJ-3E-vqs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9xa-bR-D6Q"/>
+                <constraint firstAttribute="bottom" secondItem="0co-ho-94F" secondAttribute="bottom" id="Wdh-5o-5f9"/>
+                <constraint firstAttribute="bottom" secondItem="vgJ-3E-vqs" secondAttribute="bottom" id="YtW-FN-60Z"/>
+                <constraint firstItem="0co-ho-94F" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="auA-pp-QZ6"/>
+                <constraint firstItem="0co-ho-94F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hQ4-VX-Fza"/>
+                <constraint firstAttribute="trailing" secondItem="vgJ-3E-vqs" secondAttribute="trailing" id="udO-81-sT6"/>
+            </constraints>
+            <connections>
+                <outlet property="channelImageView" destination="0co-ho-94F" id="LMF-m6-6nZ"/>
+                <outlet property="channelNameLabel" destination="Zgy-Wj-GzK" id="AKr-5k-Yv6"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
