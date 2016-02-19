@@ -38,11 +38,19 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择你感兴趣的频道" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfV-xc-E4h">
+                                            <rect key="frame" x="124" y="315" width="126" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstItem="QfV-xc-E4h" firstAttribute="centerY" secondItem="9BZ-R5-eyp" secondAttribute="centerY" id="4Rp-yn-sB8"/>
                                         <constraint firstItem="vvR-RK-4Te" firstAttribute="top" secondItem="xFt-Hr-Hhy" secondAttribute="bottom" constant="-20" id="Fs2-DS-Ym1"/>
                                         <constraint firstItem="xFt-Hr-Hhy" firstAttribute="centerY" secondItem="9BZ-R5-eyp" secondAttribute="centerY" constant="20" id="amT-kU-eRW"/>
+                                        <constraint firstItem="QfV-xc-E4h" firstAttribute="centerX" secondItem="9BZ-R5-eyp" secondAttribute="centerX" id="kVQ-zh-XHy"/>
                                         <constraint firstItem="vvR-RK-4Te" firstAttribute="centerX" secondItem="9BZ-R5-eyp" secondAttribute="centerX" id="wB6-9D-aBp"/>
                                         <constraint firstItem="xFt-Hr-Hhy" firstAttribute="centerX" secondItem="9BZ-R5-eyp" secondAttribute="centerX" id="wJJ-eQ-v16"/>
                                     </constraints>
@@ -65,6 +73,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="animationLabel" destination="QfV-xc-E4h" id="TUU-WA-5Op"/>
                         <outlet property="backImage" destination="1XO-0K-JjG" id="uP8-ew-mdg"/>
                         <outlet property="blurView" destination="kt2-Nz-Bp4" id="lfT-k4-Gbi"/>
                         <outlet property="subTitleLabel" destination="vvR-RK-4Te" id="9Im-IZ-vts"/>

@@ -10,9 +10,9 @@ import UIKit
 
 class CardEditViewController: UIViewController {
 
-    @IBOutlet weak var channelCollectionView: UICollectionView!
+    @IBOutlet weak var channelCollectionView: JDDragAndDropCollectionView!
     
-    @IBOutlet weak var selectedCollectionView: UICollectionView!
+    @IBOutlet weak var selectedCollectionView: JDDragAndDropCollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +21,27 @@ class CardEditViewController: UIViewController {
     }
     
     func configCollectionView() {
+        let channelFlowLayout = UICollectionViewFlowLayout()
+        channelFlowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        channelFlowLayout.itemSize = CGSizeMake(126, 172)
+        channelFlowLayout.minimumLineSpacing = 20
+        channelFlowLayout.minimumInteritemSpacing = 50
+        
+        channelCollectionView.collectionViewLayout = channelFlowLayout
+        
+        //register
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func confirmAction() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 }

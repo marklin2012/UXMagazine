@@ -8,12 +8,13 @@
 
 import UIKit
 
-class FirstGuideViewController: UIViewController {
+class FirstGuideViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var animationLabel: UILabel!
     
     @IBOutlet weak var titleCenterYConstraint: NSLayoutConstraint!
     var backgroundImage: UIImage?
@@ -32,6 +33,23 @@ class FirstGuideViewController: UIViewController {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         performSegueWithIdentifier("firstShowCardEdit", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "firstShowCardEdit" {
+            let desVC = segue.destinationViewController as! CardEditViewController
+            desVC.transitioningDelegate = self
+            desVC.modalPresentationStyle = UIModalPresentationStyle.Custom
+            
+        }
+    }
+    // MARK: - UIViewControllerTransitioningDelegate
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CardEditPresentAnimation(type: .Presented)
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CardEditPresentAnimation(type: .Dismissed)
     }
     
     
