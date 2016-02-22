@@ -95,7 +95,7 @@ class FirstGuideViewController: UIViewController, UIViewControllerTransitioningD
     
     private func makeSubTitleAnimation() {
         let option = UIViewAnimationOptions.CurveEaseOut
-        UIView.animateWithDuration(0.5, delay: 0, options: option, animations: { [weak self] () -> Void in
+        UIView.animateWithDuration(0.3, delay: 0, options: option, animations: { [weak self] () -> Void in
             guard let strongSelf = self else {
                 return
             }

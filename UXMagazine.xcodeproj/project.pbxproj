@@ -31,6 +31,7 @@
 		B21015FA1C75BB8D00230AE8 /* JDEditFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015F71C75BB8D00230AE8 /* JDEditFlowLayout.swift */; };
 		B21015FC1C76B6E100230AE8 /* CardEditPresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015FB1C76B6E100230AE8 /* CardEditPresentAnimation.swift */; };
 		B21016011C77018100230AE8 /* BaseTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21016001C77018100230AE8 /* BaseTransitionAnimation.swift */; };
+		B21016031C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21016021C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		B21015F71C75BB8D00230AE8 /* JDEditFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDEditFlowLayout.swift; sourceTree = "<group>"; };
 		B21015FB1C76B6E100230AE8 /* CardEditPresentAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardEditPresentAnimation.swift; sourceTree = "<group>"; };
 		B21016001C77018100230AE8 /* BaseTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransitionAnimation.swift; sourceTree = "<group>"; };
+		B21016021C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardEditSelectedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				B21015CF1C7492D000230AE8 /* CardEdit.storyboard */,
 				B21015D01C7492D000230AE8 /* CardEditViewController.swift */,
 				B21015FB1C76B6E100230AE8 /* CardEditPresentAnimation.swift */,
+				B21016021C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift */,
 			);
 			path = CardEdit;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				B21016011C77018100230AE8 /* BaseTransitionAnimation.swift in Sources */,
 				B21015F21C75B5B800230AE8 /* CardSelectedCell.swift in Sources */,
 				B21015E11C7492D000230AE8 /* ShowViewController.swift in Sources */,
+				B21016031C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift in Sources */,
 				B21015F81C75BB8D00230AE8 /* JDDragAndDropCollectionView.swift in Sources */,
 				B21015D91C7492D000230AE8 /* O2StrechableTableHeaderView.swift in Sources */,
 				B21015EE1C75AF3B00230AE8 /* CardChannelCell.swift in Sources */,
