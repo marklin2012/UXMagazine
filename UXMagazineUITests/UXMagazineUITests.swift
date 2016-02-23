@@ -33,6 +33,9 @@ class UXMagazineUITests: XCTestCase {
         scrollViewsQuery.otherElements.containingType(.StaticText, identifier:"内容每周更新与世界同步").element.swipeLeft()
         app.buttons["进入"].tap()
         
+        app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.tap()
+        
+        
     }
     
 //    override func tearDown() {
