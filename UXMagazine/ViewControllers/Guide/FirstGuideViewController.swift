@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstGuideViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class FirstGuideViewController: UIViewController {
 
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var blurView: UIVisualEffectView!
@@ -43,15 +43,6 @@ class FirstGuideViewController: UIViewController, UIViewControllerTransitioningD
             
         }
     }
-    // MARK: - UIViewControllerTransitioningDelegate
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CardEditPresentAnimation(type: .Presented)
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CardEditPresentAnimation(type: .Dismissed)
-    }
-    
     
     // MARK: - Animations
     private func makeBlurAnimation() {
@@ -113,4 +104,16 @@ class FirstGuideViewController: UIViewController, UIViewControllerTransitioningD
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+// MARK: - UIViewControllerTransitioningDelegate
+
+extension FirstGuideViewController : UIViewControllerTransitioningDelegate {
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CardEditPresentAnimation(type: .Presented)
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CardEditPresentAnimation(type: .Dismissed)
+    }
 }

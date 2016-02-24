@@ -9,8 +9,6 @@
 import UIKit
 
 public class CardEditPresentAnimation: BaseTransitionAnimation {
-    
-    //
 
     //定义动画时长
     override public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {

@@ -8,29 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+//    let datas = {
+//        for index in 1...5 {
+//            
+//        }
+//    }()
     
     var image : UIImage?
     
     
     var stretchableTableHeaderView: O2StrechableTableHeaderView?
-    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         let header = UIImageView(image: UIImage(named: "header"))
         tableView.tableHeaderView = header
-    }
-    
-    func firstLoading() {
-        let storyboard = UIStoryboard(name: "FirstGuide", bundle: nil)
-        let firstGuide = storyboard.instantiateViewControllerWithIdentifier("firstGuide") as! FirstGuideViewController
-        let snapshot = view.snapshotViewAfterScreenUpdates(true)
-        image = imageFormView(snapshot)
-        firstGuide.backgroundImage = image
-        
-        presentViewController(firstGuide, animated: false, completion: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -44,7 +40,23 @@ class ViewController: UIViewController, UITableViewDataSource, UIScrollViewDeleg
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: TableView Datasource
+    // MARK: - Custom function
+    
+    func firstLoading() {
+        // 若第一次登录
+        let storyboard = UIStoryboard(name: "FirstGuide", bundle: nil)
+        let firstGuide = storyboard.instantiateViewControllerWithIdentifier("firstGuide") as! FirstGuideViewController
+        let snapshot = view.snapshotViewAfterScreenUpdates(true)
+        image = imageFormView(snapshot)
+        firstGuide.backgroundImage = image
+        
+        presentViewController(firstGuide, animated: false, completion: nil)
+    }
+    
+}
+
+// MARK: - TableView Datasource and Delegate
+extension ViewController : UITableViewDataSource, UIScrollViewDelegate {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -58,6 +70,5 @@ class ViewController: UIViewController, UITableViewDataSource, UIScrollViewDeleg
         
         return cell!
     }
-    
 }
 
