@@ -32,6 +32,8 @@
 		B21015FC1C76B6E100230AE8 /* CardEditPresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21015FB1C76B6E100230AE8 /* CardEditPresentAnimation.swift */; };
 		B21016011C77018100230AE8 /* BaseTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21016001C77018100230AE8 /* BaseTransitionAnimation.swift */; };
 		B21016031C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21016021C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift */; };
+		B21016071C7C5BFC00230AE8 /* HomeChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21016051C7C5BFC00230AE8 /* HomeChoiceCell.swift */; };
+		B21016081C7C5BFC00230AE8 /* HomeChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		B21015FB1C76B6E100230AE8 /* CardEditPresentAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardEditPresentAnimation.swift; sourceTree = "<group>"; };
 		B21016001C77018100230AE8 /* BaseTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransitionAnimation.swift; sourceTree = "<group>"; };
 		B21016021C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardEditSelectedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		B21016051C7C5BFC00230AE8 /* HomeChoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeChoiceCell.swift; sourceTree = "<group>"; };
+		B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeChoiceCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 		B21015EA1C75AF3B00230AE8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B21016041C7C5B6000230AE8 /* Home */,
 				B21015EB1C75AF3B00230AE8 /* CardEdit */,
 			);
 			path = Cells;
@@ -265,6 +270,15 @@
 				B21016001C77018100230AE8 /* BaseTransitionAnimation.swift */,
 			);
 			path = TransitionAnimationBase;
+			sourceTree = "<group>";
+		};
+		B21016041C7C5B6000230AE8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B21016051C7C5BFC00230AE8 /* HomeChoiceCell.swift */,
+				B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +393,7 @@
 				B21015DD1C7492D000230AE8 /* FirstGuide.storyboard in Resources */,
 				B21015A21C74925A00230AE8 /* Main.storyboard in Resources */,
 				B21015EF1C75AF3B00230AE8 /* CardChannelCell.xib in Resources */,
+				B21016081C7C5BFC00230AE8 /* HomeChoiceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +421,7 @@
 				B21015DF1C7492D000230AE8 /* ViewController.swift in Sources */,
 				B21015FC1C76B6E100230AE8 /* CardEditPresentAnimation.swift in Sources */,
 				B21016011C77018100230AE8 /* BaseTransitionAnimation.swift in Sources */,
+				B21016071C7C5BFC00230AE8 /* HomeChoiceCell.swift in Sources */,
 				B21015F21C75B5B800230AE8 /* CardSelectedCell.swift in Sources */,
 				B21015E11C7492D000230AE8 /* ShowViewController.swift in Sources */,
 				B21016031C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift in Sources */,

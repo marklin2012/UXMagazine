@@ -8,11 +8,15 @@
 
 import UIKit
 
-class CardEditViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, JDDragAndDropCollectionViewDataSource {
+class CardEditViewController: UIViewController {
 
     @IBOutlet weak var channelCollectionView: JDDragAndDropCollectionView!
     
     @IBOutlet weak var selectedCollectionView: JDDragAndDropCollectionView!
+    
+    // cell identifier
+    private let CardChannelCellIdentifier = "CardChannelCell"
+    private let CardSelectedCellIdentifier = "CardSelectedCell"
     
     //测试图片
     lazy var images: [UIImage] = {
@@ -35,14 +39,19 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
     
     var dragAndDropManager: JDDragAndDropManager?
     
-    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
 
-        // Do any additional setup after loading the view.
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Custom function
     func configCollectionView() {
         let channelFlowLayout = UICollectionViewFlowLayout()
         channelFlowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
@@ -52,8 +61,6 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
         
         channelCollectionView.collectionViewLayout = channelFlowLayout
         
-        //register
-        
         let selectFlowLayout = CardEditSelectedCollectionViewFlowLayout()
         selectFlowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         selectFlowLayout.itemSize = CGSizeMake(126, 172)
@@ -62,8 +69,9 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
         
         selectedCollectionView.collectionViewLayout = selectFlowLayout
         
-        channelCollectionView.registerNib(UINib(nibName: "CardChannelCell", bundle: nil), forCellWithReuseIdentifier: "CardChannelCell")
-        selectedCollectionView.registerNib(UINib(nibName: "CardSelectedCell", bundle: nil), forCellWithReuseIdentifier: "CardSelectedCell")
+        
+        channelCollectionView.registerNib(UINib(nibName: CardChannelCellIdentifier, bundle: nil), forCellWithReuseIdentifier: CardChannelCellIdentifier)
+        selectedCollectionView.registerNib(UINib(nibName: CardSelectedCellIdentifier, bundle: nil), forCellWithReuseIdentifier: CardSelectedCellIdentifier)
         
         dragAndDropManager = JDDragAndDropManager(acanvas: view, collectionViews: [channelCollectionView, selectedCollectionView])
     }
@@ -72,15 +80,18 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     @IBAction func confirmAction() {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    // MARK: UICollectionView DataSource
+   
+    
+
+}
+
+// MARK: UICollectionView DataSource and Delegate
+extension CardEditViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == channelCollectionView {
             return images.count
@@ -90,7 +101,7 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if collectionView == channelCollectionView {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CardChannelCell", forIndexPath: indexPath) as! CardChannelCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CardChannelCellIdentifier, forIndexPath: indexPath) as! CardChannelCell
             cell.channelImageView.image = images[indexPath.row]
             cell.hidden = false
             if let jdCollectionView = collectionView as? JDDragAndDropCollectionView {
@@ -103,7 +114,7 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
             
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CardSelectedCell", forIndexPath: indexPath) as! CardSelectedCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CardSelectedCellIdentifier, forIndexPath: indexPath) as! CardSelectedCell
             cell.cardImageView.image = otherImages[indexPath.row]
             cell.hidden = false
             if let jdCollectionView = collectionView as? JDDragAndDropCollectionView {
@@ -116,6 +127,9 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
             return cell
         }
     }
+}
+
+extension CardEditViewController : JDDragAndDropCollectionViewDataSource {
     
     // MARK: - JDDragAndDropCollectionViewDataSource
     func collectionView(collectionView: UICollectionView, dataItemForIndexPath indexPath: NSIndexPath) -> AnyObject {
@@ -125,7 +139,7 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
             return otherImages[indexPath.row]
         }
     }
-    
+    //插入操作
     func collectionView(collectionView: UICollectionView, insertDataItem dataItem: AnyObject, atIndexPath indexPath: NSIndexPath) {
         if let di = dataItem as? UIImage {
             if collectionView == channelCollectionView {
@@ -136,6 +150,7 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
         }
     }
     
+    //删除操作
     func collectionView(collectionView: UICollectionView, deleteDataItemAtIndexPath indexPath: NSIndexPath) {
         if collectionView == channelCollectionView {
             images.removeAtIndex(indexPath.item)
@@ -144,6 +159,7 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
         }
     }
     
+    //交换操作
     func collectionView(collectionView: UICollectionView, moveDataItemFromIndexPath form: NSIndexPath, toIndexPath to: NSIndexPath) {
         if collectionView == channelCollectionView {
             let fromDataItem = images[form.item]
@@ -156,6 +172,7 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
         }
     }
     
+    //数据源操作
     func collectionview(collectionView: UICollectionView, indexPathForDataItem dataItem: AnyObject) -> NSIndexPath? {
         if let candidate = dataItem as? UIImage {
             if collectionView == channelCollectionView {
@@ -178,5 +195,4 @@ class CardEditViewController: UIViewController, UICollectionViewDataSource, UICo
         }
         return nil
     }
-
 }
