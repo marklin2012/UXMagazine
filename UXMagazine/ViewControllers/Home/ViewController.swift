@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let HomeChoiceCellIdentifier = "HomeChoiceCell"
+    
     @IBOutlet weak var tableView: UITableView!
     
 //    let datas = {
@@ -20,18 +22,18 @@ class ViewController: UIViewController {
     
     var image : UIImage?
     
-    
     var stretchableTableHeaderView: O2StrechableTableHeaderView?
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         let header = UIImageView(image: UIImage(named: "header"))
         tableView.tableHeaderView = header
+        configTableView()
+
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
         firstLoading()
     }
     
@@ -43,32 +45,55 @@ class ViewController: UIViewController {
     // MARK: - Custom function
     
     func firstLoading() {
-        // 若第一次登录
-        let storyboard = UIStoryboard(name: "FirstGuide", bundle: nil)
-        let firstGuide = storyboard.instantiateViewControllerWithIdentifier("firstGuide") as! FirstGuideViewController
-        let snapshot = view.snapshotViewAfterScreenUpdates(true)
-        image = imageFormView(snapshot)
-        firstGuide.backgroundImage = image
         
-        presentViewController(firstGuide, animated: false, completion: nil)
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        
+        
+        if userDefault.integerForKey("FirstLoading") == 1 {
+            // 非第一次登陆
+        } else {
+            // 若第一次登录
+            let storyboard = UIStoryboard(name: "FirstGuide", bundle: nil)
+            let firstGuide = storyboard.instantiateViewControllerWithIdentifier("firstGuide") as! FirstGuideViewController
+            let snapshot = view.snapshotViewAfterScreenUpdates(true)
+            image = imageFormView(snapshot)
+            firstGuide.backgroundImage = image
+            
+            presentViewController(firstGuide, animated: false, completion: nil)
+            
+            // 记录第一次登陆值
+            userDefault.setInteger(1, forKey: "FirstLoading")
+            userDefault.synchronize()
+        }
+        
+    }
+    
+    func configTableView() {
+        tableView.registerNib(UINib(nibName: HomeChoiceCellIdentifier, bundle: nil), forCellReuseIdentifier: HomeChoiceCellIdentifier)
     }
     
 }
 
 // MARK: - TableView Datasource and Delegate
-extension ViewController : UITableViewDataSource, UIScrollViewDelegate {
+extension ViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellId = "cellId"
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellId)
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellId)
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier(HomeChoiceCellIdentifier) as! HomeChoiceCell
         
-        return cell!
+        var model = HomeChoiceNews()
+        model.summary = "这是国外基于5000多份对前端工程师问卷的统计结果，从中可以很容易的看出前端工程师的开发习惯以及前端各种工具类库的发展趋势。"
+        cell.configure(withDataSource: model)
+        
+        return cell
     }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 178
+    }
+    
 }
+
 

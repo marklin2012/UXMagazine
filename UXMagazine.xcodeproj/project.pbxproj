@@ -34,6 +34,7 @@
 		B21016031C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21016021C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift */; };
 		B21016071C7C5BFC00230AE8 /* HomeChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21016051C7C5BFC00230AE8 /* HomeChoiceCell.swift */; };
 		B21016081C7C5BFC00230AE8 /* HomeChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */; };
+		B210160B1C7DB0AD00230AE8 /* HomeChoiceNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210160A1C7DB0AD00230AE8 /* HomeChoiceNews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		B21016021C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardEditSelectedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		B21016051C7C5BFC00230AE8 /* HomeChoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeChoiceCell.swift; sourceTree = "<group>"; };
 		B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeChoiceCell.xib; sourceTree = "<group>"; };
+		B210160A1C7DB0AD00230AE8 /* HomeChoiceNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeChoiceNews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				B210159C1C74925A00230AE8 /* AppDelegate.swift */,
+				B21016091C7DB08600230AE8 /* Models */,
 				B21015CA1C7492D000230AE8 /* Extensions */,
 				B21015E91C75AF3B00230AE8 /* Views */,
 				B21015CD1C7492D000230AE8 /* ViewControllers */,
@@ -279,6 +282,14 @@
 				B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B21016091C7DB08600230AE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B210160A1C7DB0AD00230AE8 /* HomeChoiceNews.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +442,7 @@
 				B21015DA1C7492D000230AE8 /* UIViewController+Snapshot.swift in Sources */,
 				B21015F91C75BB8D00230AE8 /* JDDragAndDropManager.swift in Sources */,
 				B21015DC1C7492D000230AE8 /* CardEditViewController.swift in Sources */,
+				B210160B1C7DB0AD00230AE8 /* HomeChoiceNews.swift in Sources */,
 				B21015DE1C7492D000230AE8 /* FirstGuideViewController.swift in Sources */,
 				B210159D1C74925A00230AE8 /* AppDelegate.swift in Sources */,
 				B21015FA1C75BB8D00230AE8 /* JDEditFlowLayout.swift in Sources */,
