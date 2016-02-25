@@ -35,6 +35,7 @@
 		B21016071C7C5BFC00230AE8 /* HomeChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21016051C7C5BFC00230AE8 /* HomeChoiceCell.swift */; };
 		B21016081C7C5BFC00230AE8 /* HomeChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */; };
 		B210160B1C7DB0AD00230AE8 /* HomeChoiceNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210160A1C7DB0AD00230AE8 /* HomeChoiceNews.swift */; };
+		B210160D1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210160C1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		B21016051C7C5BFC00230AE8 /* HomeChoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeChoiceCell.swift; sourceTree = "<group>"; };
 		B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeChoiceCell.xib; sourceTree = "<group>"; };
 		B210160A1C7DB0AD00230AE8 /* HomeChoiceNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeChoiceNews.swift; sourceTree = "<group>"; };
+		B210160C1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+O2CornerRadius.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				B21015F41C75BB8D00230AE8 /* DragableCollectionView */,
 				B21015CB1C7492D000230AE8 /* O2StrechableTableHeaderView.swift */,
 				B21015CC1C7492D000230AE8 /* UIViewController+Snapshot.swift */,
+				B210160C1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				B21016071C7C5BFC00230AE8 /* HomeChoiceCell.swift in Sources */,
 				B21015F21C75B5B800230AE8 /* CardSelectedCell.swift in Sources */,
 				B21015E11C7492D000230AE8 /* ShowViewController.swift in Sources */,
+				B210160D1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift in Sources */,
 				B21016031C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift in Sources */,
 				B21015F81C75BB8D00230AE8 /* JDDragAndDropCollectionView.swift in Sources */,
 				B21015D91C7492D000230AE8 /* O2StrechableTableHeaderView.swift in Sources */,

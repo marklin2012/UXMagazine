@@ -65,6 +65,11 @@
                                     <constraint firstItem="feu-9l-IGm" firstAttribute="leading" secondItem="8sv-NJ-lVi" secondAttribute="leading" id="dc2-RA-lpG"/>
                                     <constraint firstItem="t1H-fj-XmD" firstAttribute="leading" secondItem="feu-9l-IGm" secondAttribute="leading" constant="19" id="man-il-lFE"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,6 +79,11 @@
                             <constraint firstItem="8sv-NJ-lVi" firstAttribute="top" secondItem="ke3-H6-YGa" secondAttribute="top" id="gxP-tL-IEi"/>
                             <constraint firstAttribute="trailing" secondItem="8sv-NJ-lVi" secondAttribute="trailing" id="yCn-gg-Lma"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

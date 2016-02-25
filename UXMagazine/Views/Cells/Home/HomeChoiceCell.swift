@@ -14,6 +14,7 @@ protocol HomeChoiceCellDataSource {
     var summary: String { get }
 }
 
+@IBDesignable
 class HomeChoiceCell: UITableViewCell {
     @IBOutlet weak var bottomView: UIView!
 
@@ -27,11 +28,11 @@ class HomeChoiceCell: UITableViewCell {
     
     private var dataSource: HomeChoiceCellDataSource?
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        backView.layer.cornerRadius = 10
-        bottomView.layer.cornerRadius = 10
+//        backView.layer.cornerRadius = 10
+//        bottomView.layer.cornerRadius = 10
+        
         bottomView.layer.shadowOpacity = 0.5
         bottomView.layer.shadowOffset = CGSize(width: 0, height: 2)
         // Initialization code
