@@ -56,6 +56,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootViewCtl
     }
     
+    func startContainerController() {
+        let containerVC = O2ContainerViewController()
+        
+        window?.rootViewController = containerVC
+    }
+    
     
 }
 

@@ -274,7 +274,8 @@ class ShowViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func enterAction() {
         if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-            appDelegate.startMainStoryboard()
+//            appDelegate.startMainStoryboard()
+            appDelegate.startContainerController()
         }
     }
 

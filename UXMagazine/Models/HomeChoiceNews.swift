@@ -10,7 +10,7 @@ import UIKit
 
 struct HomeChoiceNews: HomeChoiceCellDataSource {
     var title = "JS工程师调查"
-    var imageName = "1"
+    var imageName = "coverPhoto"
     var summary = "aaaaaaaaaaaaaaa"
-    
+    var category = "前端快报"
 }

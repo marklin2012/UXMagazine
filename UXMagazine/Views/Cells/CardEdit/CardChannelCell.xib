@@ -45,6 +45,11 @@
                 <constraint firstItem="0co-ho-94F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hQ4-VX-Fza"/>
                 <constraint firstAttribute="trailing" secondItem="vgJ-3E-vqs" secondAttribute="trailing" id="udO-81-sT6"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="channelImageView" destination="0co-ho-94F" id="LMF-m6-6nZ"/>
                 <outlet property="channelNameLabel" destination="Zgy-Wj-GzK" id="AKr-5k-Yv6"/>

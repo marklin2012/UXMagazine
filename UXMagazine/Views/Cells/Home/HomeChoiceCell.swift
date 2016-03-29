@@ -12,6 +12,7 @@ protocol HomeChoiceCellDataSource {
     var imageName: String { get }
     var title: String { get }
     var summary: String { get }
+    var category: String { get }
 }
 
 @IBDesignable
@@ -25,6 +26,8 @@ class HomeChoiceCell: UITableViewCell {
     @IBOutlet weak var newTitleLabel: UILabel!
     
     @IBOutlet weak var summaryLabel: UILabel!
+    
+    @IBOutlet weak var categoryLabel: UILabel!
     
     private var dataSource: HomeChoiceCellDataSource?
     
@@ -50,6 +53,7 @@ class HomeChoiceCell: UITableViewCell {
         backImageView.image = UIImage(named: dataSource.imageName)
         newTitleLabel.text = dataSource.title
         summaryLabel.text = dataSource.summary
+        categoryLabel.text = dataSource.category
     }
     
 }

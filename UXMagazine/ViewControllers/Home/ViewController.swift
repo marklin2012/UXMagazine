@@ -8,25 +8,29 @@
 
 import UIKit
 
+@objc protocol ViewControllerDelegate {
+    optional func viewCtlScrollViewDidScroll(scrollView: UIScrollView)
+    optional func viewCtlScrollViewDidEndDecelerating(scrollView: UIScrollView)
+}
+
 class ViewController: UIViewController {
     
     private let HomeChoiceCellIdentifier = "HomeChoiceCell"
     
     @IBOutlet weak var tableView: UITableView!
     
-//    let datas = {
-//        for index in 1...5 {
-//            
-//        }
-//    }()
-    
     var image : UIImage?
+    
+    weak var delegate: ViewControllerDelegate?
+    
+    let header = UIImageView(image: UIImage(named: "header"))
     
     var stretchableTableHeaderView: O2StrechableTableHeaderView?
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let header = UIImageView(image: UIImage(named: "header"))
+        
+        header.frame.size.height = view.frame.size.height * 0.3
         tableView.tableHeaderView = header
         configTableView()
 
@@ -92,6 +96,23 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 178
+    }
+    
+}
+
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        delegate?.viewCtlScrollViewDidScroll?(scrollView)
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        delegate?.viewCtlScrollViewDidEndDecelerating?(scrollView)
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            delegate?.viewCtlScrollViewDidEndDecelerating?(scrollView)
+        }
     }
     
 }

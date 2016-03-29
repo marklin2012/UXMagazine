@@ -36,6 +36,15 @@
 		B21016081C7C5BFC00230AE8 /* HomeChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */; };
 		B210160B1C7DB0AD00230AE8 /* HomeChoiceNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210160A1C7DB0AD00230AE8 /* HomeChoiceNews.swift */; };
 		B210160D1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210160C1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift */; };
+		B21FABC21CA398C80086102A /* WeeklyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FABC01CA398C80086102A /* WeeklyCell.swift */; };
+		B21FABC31CA398C80086102A /* WeeklyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21FABC11CA398C80086102A /* WeeklyCell.xib */; };
+		B21FABC51CA3C5510086102A /* O2ConstantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FABC41CA3C5510086102A /* O2ConstantColor.swift */; };
+		B21FABC81CA3C82F0086102A /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FABC61CA3C82F0086102A /* NSDate+Extension.swift */; };
+		B21FABC91CA3C82F0086102A /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B21FABC71CA3C82F0086102A /* NSDateTimeAgo.bundle */; };
+		B2281AF31CA53F56009AF242 /* HeaderTitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281AF21CA53F56009AF242 /* HeaderTitleBar.swift */; };
+		B2281AF71CA8D653009AF242 /* HeaderTitleBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2281AF61CA8D653009AF242 /* HeaderTitleBar.xib */; };
+		B2F20DD41CA13A1200E17A7F /* O2ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F20DD31CA13A1200E17A7F /* O2ContainerViewController.swift */; };
+		B2F20DD61CA1597F00E17A7F /* O2ContainerTransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F20DD51CA1597F00E17A7F /* O2ContainerTransitionContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +100,15 @@
 		B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeChoiceCell.xib; sourceTree = "<group>"; };
 		B210160A1C7DB0AD00230AE8 /* HomeChoiceNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeChoiceNews.swift; sourceTree = "<group>"; };
 		B210160C1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+O2CornerRadius.swift"; sourceTree = "<group>"; };
+		B21FABC01CA398C80086102A /* WeeklyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyCell.swift; sourceTree = "<group>"; };
+		B21FABC11CA398C80086102A /* WeeklyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeeklyCell.xib; sourceTree = "<group>"; };
+		B21FABC41CA3C5510086102A /* O2ConstantColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2ConstantColor.swift; sourceTree = "<group>"; };
+		B21FABC61CA3C82F0086102A /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		B21FABC71CA3C82F0086102A /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
+		B2281AF21CA53F56009AF242 /* HeaderTitleBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTitleBar.swift; sourceTree = "<group>"; };
+		B2281AF61CA8D653009AF242 /* HeaderTitleBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTitleBar.xib; sourceTree = "<group>"; };
+		B2F20DD31CA13A1200E17A7F /* O2ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2ContainerViewController.swift; sourceTree = "<group>"; };
+		B2F20DD51CA1597F00E17A7F /* O2ContainerTransitionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2ContainerTransitionContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B210159C1C74925A00230AE8 /* AppDelegate.swift */,
+				B21FABC41CA3C5510086102A /* O2ConstantColor.swift */,
 				B21016091C7DB08600230AE8 /* Models */,
 				B21015CA1C7492D000230AE8 /* Extensions */,
 				B21015E91C75AF3B00230AE8 /* Views */,
@@ -175,6 +194,7 @@
 		B21015CA1C7492D000230AE8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B21FABCA1CA3C83B0086102A /* NSDate+TimeAgo */,
 				B21015FF1C77016600230AE8 /* TransitionAnimationBase */,
 				B21015F41C75BB8D00230AE8 /* DragableCollectionView */,
 				B21015CB1C7492D000230AE8 /* O2StrechableTableHeaderView.swift */,
@@ -219,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				B21015D51C7492D000230AE8 /* ViewController.swift */,
+				B2F20DD31CA13A1200E17A7F /* O2ContainerViewController.swift */,
+				B2F20DD51CA1597F00E17A7F /* O2ContainerTransitionContext.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -235,6 +257,7 @@
 		B21015E91C75AF3B00230AE8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2F20DD21CA1364300E17A7F /* Home */,
 				B21015EA1C75AF3B00230AE8 /* Cells */,
 			);
 			path = Views;
@@ -283,6 +306,8 @@
 			children = (
 				B21016051C7C5BFC00230AE8 /* HomeChoiceCell.swift */,
 				B21016061C7C5BFC00230AE8 /* HomeChoiceCell.xib */,
+				B21FABC01CA398C80086102A /* WeeklyCell.swift */,
+				B21FABC11CA398C80086102A /* WeeklyCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -293,6 +318,24 @@
 				B210160A1C7DB0AD00230AE8 /* HomeChoiceNews.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B21FABCA1CA3C83B0086102A /* NSDate+TimeAgo */ = {
+			isa = PBXGroup;
+			children = (
+				B21FABC61CA3C82F0086102A /* NSDate+Extension.swift */,
+				B21FABC71CA3C82F0086102A /* NSDateTimeAgo.bundle */,
+			);
+			name = "NSDate+TimeAgo";
+			sourceTree = "<group>";
+		};
+		B2F20DD21CA1364300E17A7F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B2281AF21CA53F56009AF242 /* HeaderTitleBar.swift */,
+				B2281AF61CA8D653009AF242 /* HeaderTitleBar.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,9 +445,12 @@
 				B21015F31C75B5B800230AE8 /* CardSelectedCell.xib in Resources */,
 				B21015A71C74925A00230AE8 /* LaunchScreen.storyboard in Resources */,
 				B21015E01C7492D000230AE8 /* Show.storyboard in Resources */,
+				B2281AF71CA8D653009AF242 /* HeaderTitleBar.xib in Resources */,
 				B21015A41C74925A00230AE8 /* Assets.xcassets in Resources */,
+				B21FABC91CA3C82F0086102A /* NSDateTimeAgo.bundle in Resources */,
 				B21015DB1C7492D000230AE8 /* CardEdit.storyboard in Resources */,
 				B21015DD1C7492D000230AE8 /* FirstGuide.storyboard in Resources */,
+				B21FABC31CA398C80086102A /* WeeklyCell.xib in Resources */,
 				B21015A21C74925A00230AE8 /* Main.storyboard in Resources */,
 				B21015EF1C75AF3B00230AE8 /* CardChannelCell.xib in Resources */,
 				B21016081C7C5BFC00230AE8 /* HomeChoiceCell.xib in Resources */,
@@ -436,15 +482,21 @@
 				B21015FC1C76B6E100230AE8 /* CardEditPresentAnimation.swift in Sources */,
 				B21016011C77018100230AE8 /* BaseTransitionAnimation.swift in Sources */,
 				B21016071C7C5BFC00230AE8 /* HomeChoiceCell.swift in Sources */,
+				B21FABC81CA3C82F0086102A /* NSDate+Extension.swift in Sources */,
+				B2F20DD41CA13A1200E17A7F /* O2ContainerViewController.swift in Sources */,
 				B21015F21C75B5B800230AE8 /* CardSelectedCell.swift in Sources */,
 				B21015E11C7492D000230AE8 /* ShowViewController.swift in Sources */,
 				B210160D1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift in Sources */,
 				B21016031C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift in Sources */,
+				B2F20DD61CA1597F00E17A7F /* O2ContainerTransitionContext.swift in Sources */,
 				B21015F81C75BB8D00230AE8 /* JDDragAndDropCollectionView.swift in Sources */,
 				B21015D91C7492D000230AE8 /* O2StrechableTableHeaderView.swift in Sources */,
+				B21FABC21CA398C80086102A /* WeeklyCell.swift in Sources */,
 				B21015EE1C75AF3B00230AE8 /* CardChannelCell.swift in Sources */,
+				B2281AF31CA53F56009AF242 /* HeaderTitleBar.swift in Sources */,
 				B21015DA1C7492D000230AE8 /* UIViewController+Snapshot.swift in Sources */,
 				B21015F91C75BB8D00230AE8 /* JDDragAndDropManager.swift in Sources */,
+				B21FABC51CA3C5510086102A /* O2ConstantColor.swift in Sources */,
 				B21015DC1C7492D000230AE8 /* CardEditViewController.swift in Sources */,
 				B210160B1C7DB0AD00230AE8 /* HomeChoiceNews.swift in Sources */,
 				B21015DE1C7492D000230AE8 /* FirstGuideViewController.swift in Sources */,
