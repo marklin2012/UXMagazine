@@ -8,14 +8,7 @@
 
 import UIKit
 
-@objc protocol ContainerViewControllerDelegate{
-  optional func containerController(containerController: O2ContainerViewController, animationControllerForTransitionFromViewController
-    fromVC: UIViewController,
-    toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?
-  optional func containerController(containerController: O2ContainerViewController, interactionControllerForAnimation
-    animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning
-  
-}
+
 
 @IBDesignable
 class O2ContainerViewController: UIViewController {
@@ -32,14 +25,15 @@ class O2ContainerViewController: UIViewController {
   private var priorSeletedIndex: Int = NSNotFound
   
   private var containerTransitionContext: O2ContainerTransitionContext?
+  /// 转场动画代理
+  weak var containerTransitionDelegate: ContainerViewControllerDelegate?
   
   private var headBar: HeaderTitleBar = {
     let header = HeaderTitleBar(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: 102))
     return  header
   }()
   
-  /// 转场动画代理
-  weak var containerTransitionDelegate: ContainerViewControllerDelegate?
+  
   
   /// 自定义控制器数组
   var viewControllers: [UIViewController]?
@@ -66,7 +60,7 @@ class O2ContainerViewController: UIViewController {
     
     // init containerView
     privateContainerview.translatesAutoresizingMaskIntoConstraints = false
-    privateContainerview.backgroundColor = UIColor.magentaColor()
+    privateContainerview.backgroundColor = UIColor.clearColor()
     view.addSubview(privateContainerview)
     view.addConstraint(NSLayoutConstraint(item: privateContainerview, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1, constant: 0))
     view.addConstraint(NSLayoutConstraint(item: privateContainerview, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1, constant: 0))
@@ -93,6 +87,48 @@ class O2ContainerViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
+    
+    // add pangesture
+    let panGesture = UIPanGestureRecognizer(target: self, action: "handlePan:")
+    view.addGestureRecognizer(panGesture)
+  }
+  // MARK: - panGesture
+  func handlePan(pan: UIPanGestureRecognizer) {
+    if viewControllers == nil || viewControllers?.count < 2 || containerTransitionDelegate == nil  {
+      return
+    }
+    
+    let delegate = containerTransitionDelegate as! O2ContainerViewControllerDelegate
+    let translationX = pan.translationInView(view).x
+    let translationAbs = translationX > 0 ? translationX : -translationX
+    let progress = translationAbs / view.frame.width
+    print(progress)
+    switch pan.state {
+    case  .Began:
+      interactive = true
+      let velocityX = pan.velocityInView(view).x
+      if velocityX < 0 {
+        if selectedIndex < viewControllers!.count - 1 {
+          selectedIndex += 1
+        }
+      } else {
+        if selectedIndex > 0 {
+          selectedIndex -= 1
+        }
+      }// if velocityX < 0 else
+    case .Changed:
+      delegate.interactionController.updateInteractiveTransition(progress)
+    case .Cancelled, .Ended:
+      interactive = false
+      if progress > 0.5 {
+//        delegate.completionSpeed = 1 - progress
+        delegate.interactionController.finishInteractiveTransition()
+      } else {
+        delegate.interactionController.cancelInteractiveTransition()
+      }
+    default: break
+    }// switch pan.state
+    
   }
   
   // MARK: - further methods
@@ -151,10 +187,16 @@ class O2ContainerViewController: UIViewController {
     // 设置视图顺序
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let rootViewCtl = storyboard.instantiateViewControllerWithIdentifier("rootCtl") as! ViewController
-    rootViewCtl.delegate = self
+    rootViewCtl.baseDelegate = self
     
-    let sub1 = UIViewController()
+    let sub1 = BaseViewController()
     sub1.view.backgroundColor = UIColor.redColor()
+    let ssss = UIScrollView(frame: CGRect(x: 0, y: 0, width: 200, height: 1000))
+    ssss.backgroundColor = UIColor.blackColor()
+    ssss.contentSize = CGSize(width: 200, height: 1000)
+    ssss.delegate = sub1
+    sub1.view.addSubview(ssss)
+    sub1.baseDelegate = self
     
     let sub2 = UIViewController()
     sub2.view.backgroundColor = UIColor.yellowColor()
@@ -194,6 +236,16 @@ class O2ContainerViewController: UIViewController {
       let fromVC = viewControllers![fromIndex]
       let toVC = viewControllers![toIndex]
       containerTransitionContext = O2ContainerTransitionContext(containerViewController: self, containerView: privateContainerview, fromViewController: fromVC, toViewController: toVC)
+      
+      if interactive {
+        priorSeletedIndex = fromIndex
+        containerTransitionContext?.startInteractiveTransitionWith(containerTransitionDelegate!)
+      } else {
+        containerTransitionContext?.startNonInteractiveTransitionWith(containerTransitionDelegate!)
+        // scrollView 做滚动
+      }
+      
+      
     } else {
       // 添加toVC 和 toView
       let newSelectedVC = viewControllers![toIndex]
@@ -227,7 +279,7 @@ extension O2ContainerViewController: UIScrollViewDelegate {
 }
 
 // MARK: - ViewControllerDelegate
-extension O2ContainerViewController: ViewControllerDelegate {
+extension O2ContainerViewController: BaseViewControllerDelegate {
   func viewCtlScrollViewDidScroll(scrollView: UIScrollView) {
     
     if (scrollView.contentOffset.y < 0) {
