@@ -47,10 +47,17 @@ class O2ContainerViewController: UIViewController {
   /// 是否可以交互
   var interactive = false
   
+  
+  
   /// 当前展示控制器下标
   var selectedIndex: Int = NSNotFound {
     willSet {
-      transitionViewControllerFromIndex(selectedIndex, toIndex: newValue)
+      if shouldReserve {
+        shouldReserve = false
+      } else {
+        transitionViewControllerFromIndex(selectedIndex, toIndex: newValue)
+      }
+      
     }
   }
   
@@ -88,13 +95,24 @@ class O2ContainerViewController: UIViewController {
     super.viewDidLoad()
     setupUI()
     
+    // add observer
+    NSNotificationCenter.defaultCenter().addObserverForName(O2ContainerTransitionEndNotification, object: nil, queue: nil, usingBlock: { _ in
+      self.containerTransitionContext = nil
+      
+    })
+    
     // add pangesture
     let panGesture = UIPanGestureRecognizer(target: self, action: "handlePan:")
     view.addGestureRecognizer(panGesture)
   }
+  
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self)
+  }
+  
   // MARK: - panGesture
   func handlePan(pan: UIPanGestureRecognizer) {
-    if viewControllers == nil || viewControllers?.count < 2 || containerTransitionDelegate == nil  {
+    if viewControllers == nil || viewControllers?.count < 2 || containerTransitionDelegate == nil  || !scrollView.scrollEnabled{
       return
     }
     
@@ -119,25 +137,29 @@ class O2ContainerViewController: UIViewController {
     case .Changed:
       delegate.interactionController.updateInteractiveTransition(progress)
     case .Cancelled, .Ended:
+
       interactive = false
       if progress > 0.5 {
-//        delegate.completionSpeed = 1 - progress
+
         delegate.interactionController.finishInteractiveTransition()
+        
       } else {
+//        delegate.interactionController.completionSpeed = -1.0
         delegate.interactionController.cancelInteractiveTransition()
       }
+      
     default: break
     }// switch pan.state
     
   }
   
-  // MARK: - further methods
+  // MARK: - UI set up
   /**
   设置图片
   */
   func setupImages() {
     // for test
-    images = [UIImage(named: "header")!, UIImage(named: "header")!, UIImage(named: "header")!]
+    images = [UIImage(named: "header")!, UIImage(named: "header1")!, UIImage(named: "header2")!]
   }
   
   /**
@@ -157,6 +179,7 @@ class O2ContainerViewController: UIViewController {
     }
     
     scrollView.contentSize = CGSizeMake(view.frame.size.width * 3, view.frame.size.height*0.3)
+    scrollView.userInteractionEnabled = false
   }
   
   /**
@@ -212,6 +235,20 @@ class O2ContainerViewController: UIViewController {
     setupHeaderView()
   }
   
+  // MARK: - ScrollView methods
+  func graduallyChangeScrollViewWith(fromIndex: Int, toIndex: Int, percent: CGFloat) {
+    let dircetion: TabOperationDirection = toIndex > fromIndex ? .Left : .Right
+    let startOffsetX = scrollView.frame.size.width * CGFloat(fromIndex)
+    switch dircetion {
+    case .Left:
+      scrollView.contentOffset.x = startOffsetX + scrollView.frame.width * percent
+    case .Right:
+      scrollView.contentOffset.x = startOffsetX - scrollView.frame.width * percent
+    }
+  }
+  
+  
+  // MARK: - further methods
   func restoreSelectedIndex() {
     shouldReserve = true
     selectedIndex = priorSeletedIndex
@@ -229,10 +266,15 @@ class O2ContainerViewController: UIViewController {
       addChildViewController(selectedVC)
       privateContainerview.addSubview(selectedVC.view)
       selectedVC.didMoveToParentViewController(self)
+      
+      // change scrollView
+      
       return
     }
     
     if containerTransitionDelegate != nil {
+      
+      
       let fromVC = viewControllers![fromIndex]
       let toVC = viewControllers![toIndex]
       containerTransitionContext = O2ContainerTransitionContext(containerViewController: self, containerView: privateContainerview, fromViewController: fromVC, toViewController: toVC)
@@ -248,22 +290,20 @@ class O2ContainerViewController: UIViewController {
       
     } else {
       // 添加toVC 和 toView
+      let priorSelectedVC = viewControllers![fromIndex]
+      priorSelectedVC.willMoveToParentViewController(nil)
+      priorSelectedVC.view.removeFromSuperview()
+      priorSelectedVC.removeFromParentViewController()
+      
+      
+      
       let newSelectedVC = viewControllers![toIndex]
       
       addChildViewController(newSelectedVC)
       
       privateContainerview.addSubview(newSelectedVC.view)
       newSelectedVC.didMoveToParentViewController(self)
-      
-      UIView.animateWithDuration(transitionDuration, animations: { () -> Void in
-        // 转场动画
-        }, completion: { _ in
-          // 移除fromVC 和 fromView
-          let priorSelectedVC = self.viewControllers![fromIndex]
-          priorSelectedVC.willMoveToParentViewController(nil)
-          priorSelectedVC.view.removeFromSuperview()
-          priorSelectedVC.removeFromParentViewController()
-      })
+
     }
   }// func
   
@@ -282,7 +322,7 @@ extension O2ContainerViewController: UIScrollViewDelegate {
 extension O2ContainerViewController: BaseViewControllerDelegate {
   func viewCtlScrollViewDidScroll(scrollView: UIScrollView) {
     
-    if (scrollView.contentOffset.y < 0) {
+    if (scrollView.contentOffset.y <= 0) {
       self.scrollView.hidden = true
     } else {
       self.scrollView.hidden = false
@@ -308,13 +348,18 @@ extension O2ContainerViewController: BaseViewControllerDelegate {
   func viewCtlScrollViewDidEndDecelerating(scrollView: UIScrollView) {
     // 如果不是在初始位置，不能滑动切换视图
     self.scrollView.scrollEnabled = (scrollView.contentOffset.y == 0) ? true : false
+//    self.interactive = (scrollView.contentOffset.y == 0) ? true : false
     // 如果
     if scrollView.contentOffset.y < (self.scrollView.frame.height - HeaderImageHeight) * 2 {
       
       UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: { () -> Void in
         scrollView.contentOffset.y = 0
-        }, completion: nil)
+        }, completion: { _ in
+          self.scrollView.scrollEnabled = true
+      })
     }
+    
+    self.scrollView.hidden = self.scrollView.scrollEnabled
     
   }
 }

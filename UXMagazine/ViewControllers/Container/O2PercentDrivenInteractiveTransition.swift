@@ -8,10 +8,10 @@
 
 import UIKit
 
-class O2PercentDrivenInteractiveTransition: NSObject, UIViewControllerInteractiveTransitioning {
+class O2PercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransition {
   weak var containerTransitionContext: O2ContainerTransitionContext?
   
-  func startInteractiveTransition(transitionContext: UIViewControllerContextTransitioning) {
+  override func startInteractiveTransition(transitionContext: UIViewControllerContextTransitioning) {
     if let context = transitionContext as? O2ContainerTransitionContext {
       containerTransitionContext = context
       containerTransitionContext?.activateInteractiveTransition()
@@ -21,15 +21,16 @@ class O2PercentDrivenInteractiveTransition: NSObject, UIViewControllerInteractiv
     
   }
   
-  func updateInteractiveTransition(percentComplete: CGFloat) {
+  override func updateInteractiveTransition(percentComplete: CGFloat) {
     containerTransitionContext?.updateInteractiveTransition(percentComplete)
   }
-  func cancelInteractiveTransition() {
+  override func cancelInteractiveTransition() {
     containerTransitionContext?.cancelInteractiveTransition()
   }
   
-  func finishInteractiveTransition() {
+  override func finishInteractiveTransition() {
     containerTransitionContext?.finishInteractiveTransition()
+    
   }
   
   

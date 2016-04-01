@@ -20,6 +20,7 @@ import UIKit
 class O2ContainerViewControllerDelegate: NSObject, ContainerViewControllerDelegate {
   var interactionController = O2PercentDrivenInteractiveTransition()
   
+  
   func containerController(containerController: O2ContainerViewController, animationControllerForTransitionFromViewController fromVC: UIViewController, toViewController toVC:UIViewController) -> UIViewControllerAnimatedTransitioning? {
     let fromIndex = containerController.viewControllers!.indexOf(fromVC)
     let toIndex = containerController.viewControllers!.indexOf(toVC)
@@ -33,7 +34,7 @@ class O2ContainerViewControllerDelegate: NSObject, ContainerViewControllerDelega
   
   func containerController(containerController: O2ContainerViewController, interactionControllerForAnimation
     animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning {
-      return interactionController
+      return interactionController      
   }
   
 }

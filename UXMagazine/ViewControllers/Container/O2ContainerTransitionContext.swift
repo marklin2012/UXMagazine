@@ -8,7 +8,8 @@
 
 import UIKit
 
-let O2ContainerTransitionEndNotification = "Notification.ContainerTransitionEnd.seedante"
+let O2ContainerTransitionEndNotification = "Notification.ContainerTransitionEnd"
+let O2InteractionEndNotification = "Notification.InteractionEnd"
 
 class O2ContainerTransitionContext: NSObject, UIViewControllerContextTransitioning {
   
@@ -39,6 +40,7 @@ class O2ContainerTransitionContext: NSObject, UIViewControllerContextTransitioni
       fromIndex = containerViewController.viewControllers!.indexOf(fromVC)!
       toIndex = containerViewController.viewControllers!.indexOf(toVC)!
       super.init()
+      // 每次转场开始调整 toView 的尺寸
       privateToVC.view.frame = privateContainerView.bounds
   }
   
@@ -101,12 +103,12 @@ class O2ContainerTransitionContext: NSObject, UIViewControllerContextTransitioni
     if didComplete {
       //转场完成，完成添加 toVC ，并且移除 fromVC 和 fromView
       privateToVC.didMoveToParentViewController(privateContainerVC)
-      privateFromeVC.willMoveToParentViewController(privateContainerVC)
+      privateFromeVC.willMoveToParentViewController(nil)
       privateFromeVC.view.removeFromSuperview()
       privateFromeVC.removeFromParentViewController()
     } else {
       privateToVC.didMoveToParentViewController(privateContainerVC)
-      privateToVC.willMoveToParentViewController(privateContainerVC)
+      privateToVC.willMoveToParentViewController(nil)
       privateToVC.view.removeFromSuperview()
       privateToVC.removeFromParentViewController()
     }
@@ -119,7 +121,9 @@ class O2ContainerTransitionContext: NSObject, UIViewControllerContextTransitioni
     if animationController != nil && interactive == true {
       transitionPercent = percentComplete
       privateContainerView.layer.timeOffset = CFTimeInterval(percentComplete) * transitionDuration
-      //            privateContainerVC
+      // 变化scrollView
+      // MARK: - to add   to percentComplete
+      privateContainerVC.graduallyChangeScrollViewWith(fromIndex, toIndex: toIndex, percent: percentComplete)
     }
   }
   
@@ -142,7 +146,7 @@ class O2ContainerTransitionContext: NSObject, UIViewControllerContextTransitioni
     isCancelled = true
     let displayLink = CADisplayLink(target: self, selector: "reverseCurrentAnimation:")
     displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
-    NSNotificationCenter.defaultCenter().postNotificationName(O2ContainerTransitionEndNotification, object: self)
+    NSNotificationCenter.defaultCenter().postNotificationName(O2InteractionEndNotification, object: self)
   }
   
   func transitionWasCancelled() -> Bool {
@@ -160,19 +164,21 @@ class O2ContainerTransitionContext: NSObject, UIViewControllerContextTransitioni
     
       // 变化scrollView
       // MARK: - to add  to transitionPercent
+      privateContainerVC.graduallyChangeScrollViewWith(fromIndex, toIndex: toIndex, percent: transitionPercent)
     } else {
       displayLink.invalidate()
       privateContainerView.layer.timeOffset = 0
       privateContainerView.layer.fillMode = kCAFillModeBackwards
       print(privateContainerView.layer.speed)
-//      privateContainerView.layer.speed = 1
+      privateContainerView.layer.speed = 1
       // 变化scrollView
       // MARK: - to add   to 0
+      privateContainerVC.graduallyChangeScrollViewWith(fromIndex, toIndex: toIndex, percent: 0)
       
       //修复闪屏BUG
       let fakeFromeView = privateFromeVC.view.snapshotViewAfterScreenUpdates(false)
       privateContainerView.addSubview(fakeFromeView)
-      performSelector("removeFakeFromView:", withObject: fakeFromeView, afterDelay: 1)
+      performSelector("removeFakeFromView:", withObject: fakeFromeView, afterDelay: 1/60)
     }
   }
   
@@ -187,9 +193,11 @@ class O2ContainerTransitionContext: NSObject, UIViewControllerContextTransitioni
     if transitionPercent < 1.0 {
       // 变化scrollView
       // MARK: - to add   to transitionPercent
+      privateContainerVC.graduallyChangeScrollViewWith(fromIndex, toIndex: toIndex, percent: transitionPercent)
     } else {
       // 变化scrollView
       // MARK: - to add   to 1
+      privateContainerVC.graduallyChangeScrollViewWith(fromIndex, toIndex: toIndex, percent: 1)
       displayLink.invalidate()
     }
   }

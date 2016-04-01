@@ -45,11 +45,11 @@
 		B2281AF71CA8D653009AF242 /* HeaderTitleBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2281AF61CA8D653009AF242 /* HeaderTitleBar.xib */; };
 		B2281AFB1CAB75DC009AF242 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281AFA1CAB75DC009AF242 /* BaseViewController.swift */; };
 		B2281AFD1CAB7D83009AF242 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281AFC1CAB7D83009AF242 /* Channel.swift */; };
-		B2281AFF1CABC976009AF242 /* O2PercentDrivenInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281AFE1CABC976009AF242 /* O2PercentDrivenInteractiveTransition.swift */; };
-		B2281B011CABCF80009AF242 /* O2ContainerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281B001CABCF80009AF242 /* O2ContainerViewControllerDelegate.swift */; };
-		B2281B031CABD152009AF242 /* O2SlideAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281B021CABD152009AF242 /* O2SlideAnimationController.swift */; };
-		B2F20DD41CA13A1200E17A7F /* O2ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F20DD31CA13A1200E17A7F /* O2ContainerViewController.swift */; };
-		B2F20DD61CA1597F00E17A7F /* O2ContainerTransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F20DD51CA1597F00E17A7F /* O2ContainerTransitionContext.swift */; };
+		B2281B491CAE8547009AF242 /* O2ContainerTransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281B431CAE8547009AF242 /* O2ContainerTransitionContext.swift */; };
+		B2281B4A1CAE8547009AF242 /* O2ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281B441CAE8547009AF242 /* O2ContainerViewController.swift */; };
+		B2281B4B1CAE8547009AF242 /* O2ContainerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281B451CAE8547009AF242 /* O2ContainerViewControllerDelegate.swift */; };
+		B2281B4C1CAE8547009AF242 /* O2PercentDrivenInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281B461CAE8547009AF242 /* O2PercentDrivenInteractiveTransition.swift */; };
+		B2281B4D1CAE8547009AF242 /* O2SlideAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2281B471CAE8547009AF242 /* O2SlideAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,11 +114,11 @@
 		B2281AF61CA8D653009AF242 /* HeaderTitleBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTitleBar.xib; sourceTree = "<group>"; };
 		B2281AFA1CAB75DC009AF242 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B2281AFC1CAB7D83009AF242 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
-		B2281AFE1CABC976009AF242 /* O2PercentDrivenInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2PercentDrivenInteractiveTransition.swift; sourceTree = "<group>"; };
-		B2281B001CABCF80009AF242 /* O2ContainerViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2ContainerViewControllerDelegate.swift; sourceTree = "<group>"; };
-		B2281B021CABD152009AF242 /* O2SlideAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2SlideAnimationController.swift; sourceTree = "<group>"; };
-		B2F20DD31CA13A1200E17A7F /* O2ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2ContainerViewController.swift; sourceTree = "<group>"; };
-		B2F20DD51CA1597F00E17A7F /* O2ContainerTransitionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2ContainerTransitionContext.swift; sourceTree = "<group>"; };
+		B2281B431CAE8547009AF242 /* O2ContainerTransitionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2ContainerTransitionContext.swift; sourceTree = "<group>"; };
+		B2281B441CAE8547009AF242 /* O2ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2ContainerViewController.swift; sourceTree = "<group>"; };
+		B2281B451CAE8547009AF242 /* O2ContainerViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2ContainerViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B2281B461CAE8547009AF242 /* O2PercentDrivenInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2PercentDrivenInteractiveTransition.swift; sourceTree = "<group>"; };
+		B2281B471CAE8547009AF242 /* O2SlideAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = O2SlideAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +219,8 @@
 		B21015CD1C7492D000230AE8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B2281B421CAE8547009AF242 /* Container */,
+				B2281B481CAE8547009AF242 /* Weekly */,
 				B21015CE1C7492D000230AE8 /* CardEdit */,
 				B21015D11C7492D000230AE8 /* Guide */,
 				B21015D41C7492D000230AE8 /* Home */,
@@ -251,11 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				B21015D51C7492D000230AE8 /* ViewController.swift */,
-				B2F20DD31CA13A1200E17A7F /* O2ContainerViewController.swift */,
-				B2281B001CABCF80009AF242 /* O2ContainerViewControllerDelegate.swift */,
-				B2F20DD51CA1597F00E17A7F /* O2ContainerTransitionContext.swift */,
-				B2281AFE1CABC976009AF242 /* O2PercentDrivenInteractiveTransition.swift */,
-				B2281B021CABD152009AF242 /* O2SlideAnimationController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -358,6 +355,25 @@
 				B2281AFA1CAB75DC009AF242 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		B2281B421CAE8547009AF242 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				B2281B431CAE8547009AF242 /* O2ContainerTransitionContext.swift */,
+				B2281B441CAE8547009AF242 /* O2ContainerViewController.swift */,
+				B2281B451CAE8547009AF242 /* O2ContainerViewControllerDelegate.swift */,
+				B2281B461CAE8547009AF242 /* O2PercentDrivenInteractiveTransition.swift */,
+				B2281B471CAE8547009AF242 /* O2SlideAnimationController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		B2281B481CAE8547009AF242 /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Weekly;
 			sourceTree = "<group>";
 		};
 		B2F20DD21CA1364300E17A7F /* Home */ = {
@@ -509,25 +525,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2281B4C1CAE8547009AF242 /* O2PercentDrivenInteractiveTransition.swift in Sources */,
 				B21015DF1C7492D000230AE8 /* ViewController.swift in Sources */,
 				B21015FC1C76B6E100230AE8 /* CardEditPresentAnimation.swift in Sources */,
 				B21016011C77018100230AE8 /* BaseTransitionAnimation.swift in Sources */,
+				B2281B4B1CAE8547009AF242 /* O2ContainerViewControllerDelegate.swift in Sources */,
 				B2281AFD1CAB7D83009AF242 /* Channel.swift in Sources */,
+				B2281B491CAE8547009AF242 /* O2ContainerTransitionContext.swift in Sources */,
+				B2281B4A1CAE8547009AF242 /* O2ContainerViewController.swift in Sources */,
 				B21016071C7C5BFC00230AE8 /* HomeChoiceCell.swift in Sources */,
 				B21FABC81CA3C82F0086102A /* NSDate+Extension.swift in Sources */,
-				B2F20DD41CA13A1200E17A7F /* O2ContainerViewController.swift in Sources */,
 				B21015F21C75B5B800230AE8 /* CardSelectedCell.swift in Sources */,
 				B21015E11C7492D000230AE8 /* ShowViewController.swift in Sources */,
 				B210160D1C7E9D3500230AE8 /* UIView+O2CornerRadius.swift in Sources */,
 				B21016031C7AFA3800230AE8 /* CardEditSelectedCollectionViewFlowLayout.swift in Sources */,
-				B2F20DD61CA1597F00E17A7F /* O2ContainerTransitionContext.swift in Sources */,
 				B21015F81C75BB8D00230AE8 /* JDDragAndDropCollectionView.swift in Sources */,
+				B2281B4D1CAE8547009AF242 /* O2SlideAnimationController.swift in Sources */,
 				B21015D91C7492D000230AE8 /* O2StrechableTableHeaderView.swift in Sources */,
 				B21FABC21CA398C80086102A /* WeeklyCell.swift in Sources */,
-				B2281B031CABD152009AF242 /* O2SlideAnimationController.swift in Sources */,
 				B21015EE1C75AF3B00230AE8 /* CardChannelCell.swift in Sources */,
-				B2281B011CABCF80009AF242 /* O2ContainerViewControllerDelegate.swift in Sources */,
-				B2281AFF1CABC976009AF242 /* O2PercentDrivenInteractiveTransition.swift in Sources */,
 				B2281AF31CA53F56009AF242 /* HeaderTitleBar.swift in Sources */,
 				B21015DA1C7492D000230AE8 /* UIViewController+Snapshot.swift in Sources */,
 				B21015F91C75BB8D00230AE8 /* JDDragAndDropManager.swift in Sources */,

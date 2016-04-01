@@ -24,7 +24,7 @@ enum O2TransitionType {
   case ModalTransition(ModalOperation)
 }
 
-class O2SlideAnimationController: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning {
+class O2SlideAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
   private var transitionType: O2TransitionType
   private let animationDuration = 0.3
   
